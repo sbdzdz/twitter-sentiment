@@ -1,4 +1,4 @@
-twitter-sentiment
+Twitter Sentiment
 =================
 
 Sentiment Analysis of Tweets
