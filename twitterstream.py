@@ -2,10 +2,10 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler, Cursor, Stream, API, TweepError
 import json
 
-consumer_key='IvEafIljD0uiiTdyFGEg5pFBf'
-consumer_secret = 'CNDkyfbaLHGDMy1dpWPMDtgSPhExHO2GRPR3WIRnCDNMeiWPXK'
-access_token='2664299401-2zZ0A79mmLw3BwxkfdytHPvyf62tM1XPsm061ZW'
-access_token_secret='mPiLgSIBNtzPF0jtQ0FxwnOCwQVMaINnyTHwAvZJwFmoP'
+consumer_key=''
+consumer_secret = ''
+access_token=''
+access_token_secret=''
 
 class StdOutListener(StreamListener):
 
