@@ -56,22 +56,22 @@ def getPopularHashtags(file):
                 for hashtag in getHashtags(tweet):
                     count[hashtag] += 1
             except ValueError:
-                continue
+                break
             except KeyError:
                 continue
     return sorted(count.iteritems(), key=operator.itemgetter(1), reverse=True)
 
 if __name__ == "__main__":
-    for key, value in getPopularUserMentions('tweets')[:500]:
-        print key, ':', value
-#     with open('tweets') as tweets:
-#         for line in tweets:
-#             try:
-#                 tweet = json.loads(line)
-#                 text = normalise(tweet['text'])
-#                 timestamp = tweet['created_at']
-#                 print ','.join([timestamp, text])
-#             except ValueError:
-#                 continue
-#             except KeyError:
-#                 continue
+    # for key, value in getPopularUserMentions('tweets')[:500]:
+    #     print key, ':', value
+    with open('tweets') as tweets:
+        for line in tweets:
+            try:
+                tweet = json.loads(line)
+                text = normalise(tweet['text'])
+                timestamp = tweet['created_at']
+                #print ','.join([timestamp, text])
+            except ValueError:
+                continue
+            except KeyError:
+                continue
